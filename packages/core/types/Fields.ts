@@ -1,5 +1,5 @@
 import { CSSProperties, ReactElement, ReactNode } from "react";
-import { DefaultComponentProps, FieldMetadata, UiState } from ".";
+import { AIConfig, DefaultComponentProps, FieldMetadata, UiState } from ".";
 import type { Editor, Extensions } from "@tiptap/react";
 import {
   EditorState,
@@ -19,6 +19,7 @@ export interface BaseField {
   labelIcon?: ReactElement;
   metadata?: FieldMetadata;
   visible?: boolean;
+  ai?: AIConfig;
 }
 
 export interface TextField extends BaseField {

@@ -13,6 +13,7 @@ import {
   LeftOrExactRight,
   WithDeepSlots,
 } from "./Internal";
+import { AIConfig } from "./AI";
 
 export type SlotComponent = (props?: Omit<DropZoneProps, "zone">) => ReactNode;
 
@@ -47,6 +48,7 @@ type ComponentConfigInternal<
   fields?: Fields<FieldProps, UserField>;
   permissions?: Partial<Permissions>;
   inline?: boolean;
+  ai?: AIConfig;
   resolveFields?: (
     data: DataShape,
     params: {
