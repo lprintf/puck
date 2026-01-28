@@ -1,4 +1,4 @@
-import packageJson from "./package.json" assert { type: "json" };
+import packageJson from "./package.json" with { type: "json" };
 import nextra from "nextra";
 
 const withNextra = nextra({
@@ -48,6 +48,6 @@ export default withNextra({
   basePath: IS_RELEASE_BRANCH
     ? `/v/${packageJson.version}`
     : process.env.NEXT_PUBLIC_IS_CANARY
-    ? "/v/canary"
-    : "",
+      ? "/v/canary"
+      : "",
 });
